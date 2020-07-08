@@ -9,10 +9,15 @@ import "regenerator-runtime/runtime"
 
 import React from "react"
 import ReactDOM from "react-dom"
+import { Provider } from "react-redux"
 import Root from "./components/Root"
 
 const App = () => {
-  return <Root />
+  return (
+    <Provider>
+      <Root />
+    </Provider>
+  )
 }
 
 ReactDOM.render(<App />, document.getElementById("app"))
